@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+@media (max-width: 600px) {
+   
+    .navbar {
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+      margin: 0;
+      display: flex;
+    }
+    nav li {
+      margin: 0.8em 0;
+    }
+    .logo {
+        margin: 0 !important;
+    }
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+.cart-btn {
+    border: none;
+}
+.cart-btn:hover {
+    background: none;
+}
+nav ul li a:hover, nav ul li a.active {
+    background: #004faa;
+    color: white;
+}
+.logo {
+    margin: 10px;
+    margin-left: 50px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px;
+    margin-left: 75px;
+}
+.col p {
+    margin-left: 75px;
+}
+.btn {
+    display: inline-block;
+    border: 2px solid black;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 30px;
+    margin: 25px;
+    margin-left: 100px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #004faa;
+    color: white;
+}
+footer {
+    position: sticky;
+    top: 100%;
+    width: 100%;
+    background: #242121;
+    color: white;
+    padding: 60px;
+    padding-bottom: 30px;
+}
+.footer-col-2 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-2 {
+    flex: 1;
+    text-align: right;
+}
+span {
+    display: none;
+}
+.socials {
+    margin-right: 2.5%;
+    margin-top: 20px;
+}
+.socials i {
+    color: white;
+    font-size: 30px;
+}

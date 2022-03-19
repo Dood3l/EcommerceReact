@@ -1,0 +1,77 @@
+.contact-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 152px);
+    padding: 20px 100px;
+    margin-bottom: 10%;
+}
+.content-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.left {
+    height: 100%;
+    /* background: url("assets/images/kami.png") no-repeat center;  */
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.right {
+    padding: 25px 40px;
+}
+h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+.field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.field:focus {
+    background-color: #fff;
+    border: 2px solid black;
+}
+.contact-btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background: #242121;
+    outline: none;
+    border: none;
+}
+.contact-btn:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.contact-btn {
+    color: white;
+}
+@media screen and (max-width:800px) {
+    .content-box {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        height: 200px;;
+    }
+}
