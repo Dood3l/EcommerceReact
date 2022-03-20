@@ -3,14 +3,14 @@ import React from 'react';
 function Footer() {
     return(
         <footer>
-        <div className="row">
+        <div id="row">
             <div>
                 <h3>Thank you for choosing Day</h3>
-                <p className="copyright">&copy; 2021 Brian K, <i>All Rights Reserved</i></p>
+                <p>&copy; 2021 Brian K, <i>All Rights Reserved</i></p>
             </div>
-            <div className="footer-col-2">
+            <div id="footer-col-2">
                 <h3>Follow Our Social Media</h3>
-                <div className="socials">
+                <div id="socials">
                     <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>&nbsp;|
                     <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>&nbsp;|
                     <a href="https://www.youtube.com" aria-label="Youtube"><i class="fab fa-youtube"></i></a>

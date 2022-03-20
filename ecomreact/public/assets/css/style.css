@@ -64,30 +64,31 @@ nav ul li a {
 nav ul li a:hover, nav ul li a.active {
     background: #004faa;
     color: white;
+    text-decoration: none;
 }
-.logo {
+#logo {
     margin: 10px;
     margin-left: 50px;
 }
-.row {
+#row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-.col {
+#col {
     flex-basis: 50%;
     min-width: 300px;
 }
-.col h1{
+#col h1{
     font-size: 50px;
     line-height: 60px;
     margin: 25px;
     margin-left: 75px;
 }
-.col p {
+#col p {
     margin-left: 75px;
 }
-.btn {
+#btn {
     display: inline-block;
     border: 2px solid black;
     color: black;
@@ -97,7 +98,7 @@ nav ul li a:hover, nav ul li a.active {
     margin-left: 100px;
     text-decoration: none;
 }
-.btn:hover {
+#btn:hover {
     background: #004faa;
     color: white;
 }
@@ -110,22 +111,22 @@ footer {
     padding: 60px;
     padding-bottom: 30px;
 }
-.footer-col-2 {
+#footer-col-2 {
     min-width: 250px;
     margin-bottom: 20px;
 }
-.footer-col-2 {
+#footer-col-2 {
     flex: 1;
     text-align: right;
 }
 span {
     display: none;
 }
-.socials {
+#socials {
     margin-right: 2.5%;
     margin-top: 20px;
 }
-.socials i {
+#socials i {
     color: white;
     font-size: 30px;
 }

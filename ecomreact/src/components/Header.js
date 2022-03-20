@@ -5,8 +5,8 @@ function Header() {
     return (
         <header>
         <div className="navbar">
-            <div className="logo">
-                <Link to="/Home"><img src="assets/images/logo.png" alt="logo"/></Link>
+            <div id="logo">
+                <Link to="/Home"><img src="assets/images/logo.png" style={{width: "125px"}}alt="logo"/></Link>
             </div>
             <nav>
                 <ul>
