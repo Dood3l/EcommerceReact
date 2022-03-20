@@ -9,7 +9,7 @@ function Home() {
                 <h1>Quality never goes out of style</h1>
                 <p>Here at Day, we strive to provide users with Hi-Quality digital art at an affordable price point.
                     Sound too good to be true? Click the Explore button and see for yourself!</p>
-                <a href="products.html" className="btn">Explore</a>
+                <a href="/products" className="btn">Explore</a>
             </div>
 
             <section className="slide-container">

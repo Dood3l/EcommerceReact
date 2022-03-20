@@ -51,7 +51,7 @@ function Product() {
 
         <section className="card">
             <div className="card-image">
-                <img src="assets/images/kami.png" alt="prod4"/>
+                <img src="assets/images/roshi.png" alt="prod4"/>
             </div>
             <div className="card-title">
                 <h1>Roshi's House</h1>
