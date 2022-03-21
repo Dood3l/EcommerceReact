@@ -11,6 +11,9 @@ html {
   height: 100%;
   overflow-x: hidden;
 }
+#root{
+    min-height: 100%;
+}
 .navbar {
     display: flex;
     align-items: center;
