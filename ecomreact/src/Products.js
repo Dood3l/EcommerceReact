@@ -5,9 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Product() {
     return(
         // CARD 1
-        <div class="row">
+        <div>
+            <h6>Filter: </h6>
+        <div id="fButtons">
+            <button id="button" class="btn btn-light" onclick="filterProduct">Anime</button>
+            <button id="button" class="btn btn-light" onclick="filterProduct">Synth</button>
+            <button id="button" class="btn btn-light" onclick="filterProduct">Contrasted</button>
+        </div>
+        <br />        
+        <div>
+        <div id="cardAlign" class="row">
             <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 1){
@@ -31,6 +40,13 @@ function Product() {
                     }
                 })
         }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
+                    }
+                })
+        }
             <div class="btn btn-primary">Add to cart</div>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
@@ -38,7 +54,7 @@ function Product() {
         </div>
         {/* CARD 2*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 2){
@@ -58,6 +74,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 2){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -68,7 +91,7 @@ function Product() {
         </div>
         {/* CARD 3*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 3){
@@ -88,6 +111,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 3){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -98,7 +128,7 @@ function Product() {
         </div>
         {/* CARD 4*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 4){
@@ -118,6 +148,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 4){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -128,7 +165,7 @@ function Product() {
         </div>
         {/* CARD 5*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 5){
@@ -148,6 +185,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 5){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -158,7 +202,7 @@ function Product() {
         </div>
         {/* CARD 6*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 6){
@@ -178,6 +222,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 6){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -188,7 +239,7 @@ function Product() {
         </div>
         {/* CARD 7*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 7){
@@ -208,6 +259,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 7){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -218,7 +276,7 @@ function Product() {
         </div>
         {/* CARD 8*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 8){
@@ -238,6 +296,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 8){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -248,7 +313,7 @@ function Product() {
         </div>
         {/* CARD 9*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 9){
@@ -268,6 +333,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 9){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -278,7 +350,7 @@ function Product() {
         </div>
         {/* CARD 10*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 10){
@@ -298,6 +370,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 10){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -308,7 +387,7 @@ function Product() {
         </div>
         {/* CARD 11*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 11){
@@ -328,6 +407,13 @@ function Product() {
                 Records.map(record => {
                     if(record.id === 11){
                         return <p class="card-text"> {record.description}</p>
+                    }
+                })
+        }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
                     }
                 })
         }
@@ -338,7 +424,7 @@ function Product() {
         </div>
         {/* CARD 12*/}
         <div class="col-sm-6">
-        <div class="card">
+        <div id="hide" class="card">
         {
                 Records.map(record => {
                     if(record.id === 12){
@@ -361,11 +447,20 @@ function Product() {
                     }
                 })
         }
+        {
+                Records.map(record => {
+                    if(record.id === 1){
+                        return <p class="card-text"> {record.price}</p>
+                    }
+                })
+        }
             <div class="btn btn-primary">Add to cart</div>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
         </div>
+      </div>
+      </div>
       </div>
     )}
 export default Product

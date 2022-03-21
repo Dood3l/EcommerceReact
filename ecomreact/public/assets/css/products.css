@@ -63,3 +63,20 @@
 } */
 #text-bolder {
   font-weight: bold;
+}
+/* #hide {
+  display: none;
+} */
+
+#button, h6{
+  margin-left: 1%;
+}
+#button:hover {
+  background: #004faa;
+}
+#button {
+  border: solid black 1px;
+}
+#cardAlign {
+  margin: 1%;
+}
