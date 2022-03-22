@@ -75,3 +75,17 @@ h2 {
         height: 200px;;
     }
 }
+@media screen and (max-width: 450px) {
+    .content-box {
+        grid-template-columns: 1fr;
+        width: 500px;
+    }
+    .left {
+        height: 200px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+    .right {
+        padding: 25px 40px;
+    }
+}

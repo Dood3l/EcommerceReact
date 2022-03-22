@@ -41,3 +41,45 @@
 #slider-image-3:target~#image-container {
     left: -1600px;
 }
+@media (max-width: 450px) {
+    #slide-container {
+        width: 350px;
+    }
+    #slider-image-2:target~#image-container {
+        left: -350px;
+    }
+    #slider-image-3:target~#image-container {
+        left: -700px;
+    }
+    #slider-button {
+        display: inline-block;
+        height: 15px;
+        width: 30px;
+        border-radius: 10px;
+        background-color: black;
+        margin-right: 1%;
+    }
+    #slider-image {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        max-width: 350px;
+        max-height: 600px;
+    }
+    #button-container {
+        top: -350px;
+        position: relative;
+        
+    }
+    
+}
+@media (max-width: 850px) {
+    #slider-button {
+        display: inline-block;
+        height: 15px;
+        width: 30px;
+        border-radius: 10px;
+        background-color: black;
+        margin-right: 1%;
+    }
+}
