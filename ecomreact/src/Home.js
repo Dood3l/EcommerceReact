@@ -1,10 +1,10 @@
 import React from 'react'
 
+
 function Home() {
     return(
         <main>
         <div id="row">
-
             <div id="col">
                 <h1><b>Quality never goes out of style</b></h1>
                 <p>Here at Day, we strive to provide users with Hi-Quality digital art at an affordable price point.
