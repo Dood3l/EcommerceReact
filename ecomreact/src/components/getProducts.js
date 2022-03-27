@@ -19,7 +19,7 @@ export default class Productlist extends React.Component {
             {
                 this.state.products.map(record => (
 
-                    <div class="col-sm-6">
+                    <div id="cardflex" class="col-sm-6">
                         <div id="cardDetailing" class="card">
                             <img id="card-image" class="card-img-top" src={ record.Image } alt="Card image cap"/>
                             <div class="card-body">
