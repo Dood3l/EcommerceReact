@@ -1,5 +1,5 @@
 const path = require('path')
-
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
@@ -9,10 +9,10 @@ const app = express();
 let db;
 
 db = mysql.createConnection({
-    host: 'eyw6324oty5fsovx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user: 'op22h1cgrl9tnjn9',
-    password: 'n8e85kxddgubuvwv',
-    database: 'vvypvweu7i2k8kvn'
+    host: process.env.REACT_APP_DBHOST || 'localhost',
+    user: process.env.REACT_APP_DBUSER || 'root',
+    password: process.env.REACT_APP_DBPASSWORD ||'Dood3l',
+    database: process.env.REACT_APP_DB || 'ecomv2'
 });
 
 
