@@ -31,7 +31,7 @@ db.connect(err => {
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/products' || process.env.JAWSDB_URL, (req, res) => {
+app.get('/api/products', (req, res) => {
     db.query('SELECT * FROM products', (err, result) => {
         if (err) {
             console.log(err)

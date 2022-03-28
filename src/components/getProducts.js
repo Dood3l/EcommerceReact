@@ -10,7 +10,7 @@ export default class Productlist extends React.Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:4000/api/products' || process.env.JAWSDB_URL).then(res => {
+        axios.get('http://localhost:4000/api/products').then(res => {
             console.log(res);
             this.setState({ products: res.data });
         });
