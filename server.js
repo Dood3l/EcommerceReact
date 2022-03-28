@@ -6,12 +6,19 @@ const mysql = require('mysql');
 // var fs = require('fs');
 const app = express();
 
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Dood3l',
-    database: 'ecomv2'
-});
+let connection;
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    const db = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'Dood3l',
+        database: 'ecomv2'
+    });
+}
+
 
 db.connect(err => {
     if(err) {
