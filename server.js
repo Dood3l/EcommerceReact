@@ -47,7 +47,7 @@ app.get('/api/products' || process.env.JAWSDB_URL, (req, res) => {
     })
 });
 app.use(express.static(path.join(__dirname, './build')));
-app.listen(process.env.JAWSDB_URL || 4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log(`Console server listening on port 4000.`)
 });
 
