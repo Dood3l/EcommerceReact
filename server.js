@@ -8,16 +8,13 @@ const app = express();
 
 let db;
 
-if (process.env.JAWSDB_URL) {
-    db = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-    db = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'Dood3l',
-        database: 'ecomv2'
-    });
-}
+db = mysql.createConnection({
+    host: 'eyw6324oty5fsovx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'op22h1cgrl9tnjn9',
+    password: 'n8e85kxddgubuvwv',
+    database: 'vvypvweu7i2k8kvn'
+});
+
 
 
 db.connect(err => {
