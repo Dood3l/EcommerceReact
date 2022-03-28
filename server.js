@@ -6,12 +6,12 @@ const mysql = require('mysql');
 // var fs = require('fs');
 const app = express();
 
-let connection;
+let db;
 
 if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+    db = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-    const db = mysql.createConnection({
+    db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: 'Dood3l',
