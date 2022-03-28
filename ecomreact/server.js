@@ -1,3 +1,5 @@
+const path = require('path')
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
@@ -37,7 +39,7 @@ app.get('/api/products', (req, res) => {
         }
     })
 });
-
+app.use(express.static(path.join(__dirname, './build')));
 app.listen(4000, () => {
     console.log(`Console server listening on port 4000.`)
 });

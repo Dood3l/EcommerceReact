@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom';
 
 function Home() {
     return(
@@ -9,7 +9,7 @@ function Home() {
                 <h1><b>Quality never goes out of style</b></h1>
                 <p>Here at Day, we strive to provide users with Hi-Quality digital art at an affordable price point.
                     Sound too good to be true? Click the Explore button and see for yourself!</p>
-                <a href="/products" id="btn">Explore</a>
+                <Link to="/Products" id="btn">Explore</Link>
             </div>
 
             <section id="slide-container">
