@@ -76,6 +76,9 @@ h2 {
     }
 }
 @media screen and (max-width: 450px) {
+    .contact-container{
+        padding: 10px;
+    }
     .content-box {
         grid-template-columns: 1fr;
         width: 500px;
