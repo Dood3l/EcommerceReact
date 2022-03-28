@@ -20,18 +20,24 @@ export default class Productlist extends React.Component {
             this.setState({type})
         }
     }
-    
     render() {
         
         return (
             
             <div>
-                <h6>Filter: </h6>
+                <h6>Filter By Category: </h6>
                 <div id="fButtons">
                     <button id="button" class="btn btn-light" onClick={this.filter("All")}>All</button>
                     <button id="button" class="btn btn-light" onClick={this.filter("Anime")}>Anime</button>
                     <button id="button" class="btn btn-light" onClick={this.filter("Synth")}>Synth</button>
                     <button id="button" class="btn btn-light" onClick={this.filter("Contrasted")}>Contrasted</button>
+                </div>
+                <h6>Filter By Price: </h6>
+                <div id="fButtons">
+                    <button id="button" class="btn btn-light" onClick={this.filter("Anime")}>$0-5</button>
+                    <button id="button" class="btn btn-light" onClick={this.filter("Synth")}>$6-9</button>
+                    <button id="button" class="btn btn-light" onClick={this.filter("Contrasted")}>$10-30</button>
+                    <button id="button" class="btn btn-light" onClick={this.filter("All")}>Reset</button>
                 </div>
                 <div id="cardAlign" class="row">
                     {
@@ -49,7 +55,7 @@ export default class Productlist extends React.Component {
                                     <div class="card-body">
                                         <h4 id="text-bolder" class="card-title"> {record.Title}</h4>
                                         <p class="card-text card-desc"> {record.ProductDesc}</p>
-                                        <p class="card-text"> {record.Price}</p>
+                                        <p class="card-text">${record.Price}</p>
                                         <div class="btn btn-primary">Add to cart</div>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                     </div>

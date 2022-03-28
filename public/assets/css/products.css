@@ -88,6 +88,7 @@
 }
 #button {
   border: solid black 1px;
+  margin-bottom: 1%;
 }
 #cardAlign {
   margin: 1%;
