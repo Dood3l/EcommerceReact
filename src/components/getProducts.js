@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default class Productlist extends React.Component {
     state = {
         products: [],
-        type: "All"
+        type: "All",
+        filterText: ""
     }
 
 
@@ -20,6 +21,16 @@ export default class Productlist extends React.Component {
             this.setState({type})
         }
     }
+    onChange (e){
+        this.setState({filterText: e.target.value})
+        
+    }
+    resetFilterText () {
+        this.setState({filterText: ""})
+    }
+    normalizeString(str) {
+        return str.toLowerCase().replace(/\s/g, "")
+    }
     render() {
         
         return (
@@ -27,21 +38,27 @@ export default class Productlist extends React.Component {
             <div>
                 <h6>Filter By Category: </h6>
                 <div id="fButtons">
-                    <button id="button" class="btn btn-light" onClick={this.filter("All")}>All</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("Anime")}>Anime</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("Synth")}>Synth</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("Contrasted")}>Contrasted</button>
+                    <button id="button" className="btn btn-light" onClick={this.filter("All")}>All</button>
+                    <button id="button" className="btn btn-light" onClick={this.filter("Anime")}>Anime</button>
+                    <button id="button" className="btn btn-light" onClick={this.filter("Synth")}>Synth</button>
+                    <button id="button" className="btn btn-light" onClick={this.filter("Contrasted")}>Contrasted</button>
                 </div>
-                <h6>Filter By Price: </h6>
+                <h6>Search By Name:</h6>
                 <div id="fButtons">
-                    <button id="button" class="btn btn-light" onClick={this.filter("Anime")}>$0-5</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("Synth")}>$6-9</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("Contrasted")}>$10-30</button>
-                    <button id="button" class="btn btn-light" onClick={this.filter("All")}>Reset</button>
+                    <input type="text" value={this.state.filterText} onChange={(e) => this.onChange(e)}></input>
+                    <button id="button" className="btn btn-light" onClick={() => this.resetFilterText()}>Reset</button>
                 </div>
-                <div id="cardAlign" class="row">
+                <div id="cardAlign" className="row">
                     {
-                        this.state.products.filter((record) => {
+                        this.state.products
+                        .filter((record) => {
+                            if (this.state.filterText === ""){
+                                return true
+                            } else{
+                                return this.normalizeString(record.Title).includes(this.normalizeString(this.state.filterText))
+                            }
+                        })
+                        .filter((record) => {
                             if (this.state.type === "All"){
                                 return true 
                             } else {
@@ -49,15 +66,15 @@ export default class Productlist extends React.Component {
                             }
                         }).map(record => (
 
-                            <div id="cardflex" class="col-sm-6">
-                                <div id="cardDetailing" class="card">
-                                    <img id="card-image" class="card-img-top" src={record.Image} alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h4 id="text-bolder" class="card-title"> {record.Title}</h4>
-                                        <p class="card-text card-desc"> {record.ProductDesc}</p>
-                                        <p class="card-text">${record.Price}</p>
-                                        <div class="btn btn-primary">Add to cart</div>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div id="cardflex" className="col-sm-6">
+                                <div id="cardDetailing" className="card">
+                                    <img id="card-image" className="card-img-top" src={record.Image} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h4 id="text-bolder" className="card-title"> {record.Title}</h4>
+                                        <p className="card-text card-desc"> {record.ProductDesc}</p>
+                                        <p className="card-text">${record.Price}</p>
+                                        <div className="btn btn-primary">Add to cart</div>
+                                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                     </div>
                                 </div>
                             </div>

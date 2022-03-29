@@ -11,9 +11,9 @@ function Footer() {
             <div id="footer-col-2">
                 <h3>Follow Our Social Media</h3>
                 <div id="socials">
-                    <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>&nbsp;|
-                    <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>&nbsp;|
-                    <a href="https://www.youtube.com" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com" aria-label="Twitter"><i className="fab fa-twitter"></i></a>&nbsp;|
+                    <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>&nbsp;|
+                    <a href="https://www.youtube.com" aria-label="Youtube"><i className="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
