@@ -1,10 +1,10 @@
 const path = require('path')
-// require('dotenv').config()
+// require('dotenv').config() -- Best practice for security 
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-// var fs = require('fs');
 const app = express();
+// Above this line are the dependencies
 
 let db;
 console.log(process.env)
@@ -14,8 +14,7 @@ db = mysql.createConnection({
     password: '43adde49',
     database: 'heroku_e1c0b0c780ef5e7'
 });
-
-
+// Above this line is the connection between React and Heroku mySQL cloud.
 
 db.connect(err => {
     if(err) {
@@ -25,42 +24,28 @@ db.connect(err => {
         console.log("db connection successful!")
     }
 });
+// Above this line is a function that checked if the connection between React and mySQL is successful.
 
 app.use(cors());
 app.use(express.json());
-
 app.get('/api/products', (req, res) => {
     db.query('SELECT * FROM products', (err, result) => {
         if (err) {
             console.log(err)
         }else {
-            // var resultData = JSON.stringify(result)
-            // var data = 
             res.send(result);
-            // fs.writeFile('src/wagawgwag.json', resultData, finished);
-            // function finished(err) {
-            //     console.log('ALL GOOOD BRUHHHH.');
-            // }
         }
     })
 });
+// Above this line is a function that queries data from mySQL.
+
 app.use(express.static(path.join(__dirname, './build')));
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, './build', 'index.html'))
 })
+// Above this line is a function that fixes the refresh issue.
 
 app.listen(process.env.PORT || 5000, () => {
     console.log(`Express is working on port 5000`)
 });
-
-// const server = app.listen(process.env.PORT || 5000, () => {
-//     const port = server.address().port
-//     console.log(`Express is working on port ${port}`)
-// });
-
-// db = mysql.createConnection({
-//     host: process.env.REACT_APP_DBHOST || 'localhost',
-//     user: process.env.REACT_APP_DBUSER || 'root',
-//     password: process.env.REACT_APP_DBPASSWORD ||'Dood3l',
-//     database: process.env.REACT_APP_DB || 'ecomv2'
-// });
+// Above this line is a function that pushes the server to either a port set dynamically by Heroku, or it defaults to port 5000.

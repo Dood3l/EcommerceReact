@@ -8,8 +8,7 @@ export default class Productlist extends React.Component {
         type: "All",
         filterText: ""
     }
-
-
+    //UseState is a react hook that lets you set some state to react component.
     componentDidMount() {
         axios.get('/api/products').then(res => {
             console.log(res);
