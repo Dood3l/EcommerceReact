@@ -93,3 +93,12 @@
 #cardAlign {
   margin: 1%;
 }
+.search-container{
+  display: flex;
+}
+.searchBar {
+  margin-left: 1%;
+}
+.searchBox {
+  width: 212px;
+}

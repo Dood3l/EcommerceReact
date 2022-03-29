@@ -25,9 +25,9 @@ export default class Productlist extends React.Component {
         this.setState({filterText: e.target.value})
         
     }
-    resetFilterText () {
-        this.setState({filterText: ""})
-    }
+    // resetFilterText () {
+    //     this.setState({filterText: ""})
+    // }
     normalizeString(str) {
         return str.toLowerCase().replace(/\s/g, "")
     }
@@ -43,10 +43,12 @@ export default class Productlist extends React.Component {
                     <button id="button" className="btn btn-light" onClick={this.filter("Synth")}>Synth</button>
                     <button id="button" className="btn btn-light" onClick={this.filter("Contrasted")}>Contrasted</button>
                 </div>
+                <div className="search-container">
                 <h6>Search By Name:</h6>
-                <div id="fButtons">
-                    <input type="text" value={this.state.filterText} onChange={(e) => this.onChange(e)}></input>
-                    <button id="button" className="btn btn-light" onClick={() => this.resetFilterText()}>Reset</button>
+                <div className="searchBar"id="fButtons">
+                    <input className="searchBox" type="text" value={this.state.filterText} onChange={(e) => this.onChange(e)}></input>
+                    {/* <button id="button" className="btn btn-light" onClick={() => this.resetFilterText()}>Reset</button> */}
+                </div>
                 </div>
                 <div id="cardAlign" className="row">
                     {
