@@ -60,3 +60,4 @@ function handleDisconnect() {
     });
   }
 handleDisconnect();
+// Above this line is a function that takes cycles through the server to make sure it reconnects before the app gets launched.
