@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 })
 // Above this line is a function that fixes the refresh issue.
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5000, function(){
     console.log(`Express is working on port 5000`)
 });
 // Above this line is a function that pushes the server to either a port set dynamically by Heroku, or it defaults to port 5000.
