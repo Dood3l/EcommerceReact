@@ -6,13 +6,13 @@ import Home from './Home';
 import Product from './Products';
 import Contact from './Contact';
 import Cart from './Cart';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 
-
+// Used HashRouter instead of BrowserRouter in order to refresh page
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       <Footer />
-      </Router>
+      </HashRouter>
     </>
   );
 }
