@@ -7,7 +7,7 @@ const mysql = require('mysql');
 const app = express();
 
 let db;
-
+console.log(process.env)
 db = mysql.createConnection({
     host: process.env.REACT_APP_DBHOST || 'localhost',
     user: process.env.REACT_APP_DBUSER || 'root',
