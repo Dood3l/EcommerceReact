@@ -48,8 +48,9 @@ app.use(express.static(path.join(__dirname, './build')));
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, './build', 'index.html'))
 })
-app.listen(process.env.PORT || 4000, () => {
-    console.log(`Console server listening on port 4000.`)
+const server = app.listen(process.env.PORT || 5000, () => {
+    const port = server.address().port
+    console.log(`Express is working on port ${port}`)
 });
 
 // db = mysql.createConnection({
