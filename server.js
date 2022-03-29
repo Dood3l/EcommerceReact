@@ -9,16 +9,17 @@ const app = express();
 let db;
 console.log(process.env)
 db = mysql.createConnection({
-    host: 'eyw6324oty5fsovx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com' || 'localhost',
-    user: 'op22h1cgrl9tnjn9' || 'root',
-    password: 'n8e85kxddgubuvwv' ||'Dood3l',
-    database: 'vvypvweu7i2k8kvn' || 'ecomv2'
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'b09453fff7c96a',
+    password: '43adde49',
+    database: 'heroku_e1c0b0c780ef5e7'
 });
 
 
 
 db.connect(err => {
     if(err) {
+        console.log('from db', err)
         return err;
     } else {
         console.log("db connection successful!")
