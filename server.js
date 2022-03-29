@@ -9,10 +9,10 @@ const app = express();
 let db;
 console.log(process.env)
 db = mysql.createConnection({
-    host: process.env.REACT_APP_DBHOST || 'localhost',
-    user: process.env.REACT_APP_DBUSER || 'root',
-    password: process.env.REACT_APP_DBPASSWORD ||'Dood3l',
-    database: process.env.REACT_APP_DB || 'ecomv2'
+    host: 'eyw6324oty5fsovx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com' || 'localhost',
+    user: 'op22h1cgrl9tnjn9' || 'root',
+    password: 'n8e85kxddgubuvwv' ||'Dood3l',
+    database: 'vvypvweu7i2k8kvn' || 'ecomv2'
 });
 
 
@@ -48,3 +48,9 @@ app.listen(process.env.PORT || 4000, () => {
     console.log(`Console server listening on port 4000.`)
 });
 
+// db = mysql.createConnection({
+//     host: process.env.REACT_APP_DBHOST || 'localhost',
+//     user: process.env.REACT_APP_DBUSER || 'root',
+//     password: process.env.REACT_APP_DBPASSWORD ||'Dood3l',
+//     database: process.env.REACT_APP_DB || 'ecomv2'
+// });
