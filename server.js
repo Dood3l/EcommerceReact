@@ -6,9 +6,9 @@ const mysql = require('mysql');
 const app = express();
 // Above this line are the dependencies
 
+let connection;
 
-
-var db_config = {
+const db_config = {
     host: 'us-cdbr-east-05.cleardb.net',
     user: 'b09453fff7c96a',
     password: '43adde49',
@@ -18,7 +18,10 @@ var db_config = {
 
 app.use(cors());
 app.use(express.json());
+
 app.get('/api/products', (req, res) => {
+    if (!connection) res.send([]);
+
     connection.query('SELECT * FROM products', (err, result) => {
         if (err) {
             console.log(err)
