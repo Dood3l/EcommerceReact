@@ -1,6 +1,5 @@
-
 import axios from 'axios';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default class Productlist extends React.Component {
     state = {
@@ -15,7 +14,7 @@ export default class Productlist extends React.Component {
             this.setState({ products: res.data });
         });
     }
-    filter (type){
+    myFilter (type){
         return () => {
             this.setState({type})
         }
@@ -37,10 +36,10 @@ export default class Productlist extends React.Component {
             <div>
                 <h6>Filter By Category: </h6>
                 <div id="fButtons">
-                    <button id="button" className="btn btn-light" onClick={this.filter("All")}>All</button>
-                    <button id="button" className="btn btn-light" onClick={this.filter("Anime")}>Anime</button>
-                    <button id="button" className="btn btn-light" onClick={this.filter("Synth")}>Synth</button>
-                    <button id="button" className="btn btn-light" onClick={this.filter("Contrasted")}>Contrasted</button>
+                    <button id="button" className="btn btn-light" onClick={this.myFilter("All")}>All</button>
+                    <button id="button" className="btn btn-light" onClick={this.myFilter("Anime")}>Anime</button>
+                    <button id="button" className="btn btn-light" onClick={this.myFilter("Synth")}>Synth</button>
+                    <button id="button" className="btn btn-light" onClick={this.myFilter("Contrasted")}>Contrasted</button>
                 </div>
                 <div className="search-container">
                 <h6>Search By Name:</h6>

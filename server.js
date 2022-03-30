@@ -17,6 +17,7 @@ const db_config = {
 // Above this line is the connection between React and Heroku mySQL cloud.
 
 app.use(cors());
+// cross-origin-resource
 app.use(express.json());
 
 app.get('/api/products', (req, res) => {
