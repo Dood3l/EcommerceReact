@@ -8,7 +8,6 @@ import Contact from './Contact';
 import Cart from './Cart';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// Used HashRouter instead of BrowserRouter in order to refresh page
 function App() {
   return (
     <>
