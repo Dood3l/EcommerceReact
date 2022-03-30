@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, './build')));
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, './build', 'index.html'))
 })
-// Above this line is a function that fixes the refresh issue.
+// Above this line is a function that fixes the refresh issue/ allows node to be connected.
 
 app.listen(process.env.PORT || 5000, function(){
     console.log(`Express is working on port 5000`)
