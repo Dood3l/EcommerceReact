@@ -12,7 +12,7 @@ const db_config = {
     host: 'us-cdbr-east-05.cleardb.net',
     user: 'b09453fff7c96a',
     password: '43adde49',
-    database: 'heroku_e1c0b0c780ef5e7'
+    database: 'heroku_f753746a4ee891d?reconnect=true'
 };
 // Above this line is the connection between React and Heroku mySQL cloud.
 
